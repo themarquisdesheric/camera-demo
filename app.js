@@ -1,4 +1,6 @@
 const video = document.querySelector('video');
+const filter = document.querySelector('#filter');
+
 const constraints = {
 	audio: false,
 	video: {
@@ -20,3 +22,6 @@ navigator.mediaDevices.getUserMedia(constraints)
 		alert(err);
 	});
 
+filter.addEventListener('click', () => {
+	video.classList.toggle('grayscale');
+});
