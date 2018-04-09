@@ -7,4 +7,9 @@ const constraints = {
 }
 
 navigator.mediaDevices.getUserMedia(constraints)
-  .then(stream => video.srcObject = stream);
+  .then(stream => video.srcObject = stream)
+  .catch(err => {
+      console.log(err);
+      alert(err);
+  });
+  
