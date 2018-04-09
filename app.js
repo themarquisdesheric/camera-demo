@@ -19,3 +19,4 @@ navigator.mediaDevices.getUserMedia(constraints)
 		console.log(err);
 		alert(err);
 	});
+
